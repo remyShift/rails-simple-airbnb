@@ -1,0 +1,39 @@
+<%= render 'shared/banner' %>
+
+<div class="h-[350px] w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')">
+
+</div>
+
+<div class="w-full flex justify-center">
+  <div class="w-[65%] grid grid-cols-3 gap-4 -mt-24">
+    <div class="col-span-2 flex flex-col gap-4">
+      <div class="max-w-[2500px] bg-slate-100 rounded-lg shadow-md p-4 flex flex-col justify-center gap-2">
+        <h1 class="text-4xl font-bold"><%= @flat.name %></h1>
+        <p class="text-sm"><%= @flat.address %></p>
+      </div>
+
+      <div class="min-w-[350px] max-w-[2500px] bg-slate-100 rounded-lg shadow-md p-4 flex flex-col justify-center gap-2">
+        <h2 class="text-2xl">A bit more about this flat...</h2>
+        <p class="text-sm"><%= @flat.description %></p>
+        <div class="h-[350px] bg-cover bg-center" style="background-image: url('https://a.storyblok.com/f/178460/1920x1000/394ad3b1e2/keeponmoving-webinar-slider-1920x1000px-desktop.jpg')"></div>
+      </div>
+    </div>
+
+    <div class="col-span-1 flex flex-col gap-4">
+      <div class="min-w-[150px] max-w-[2500px] bg-slate-100 rounded-lg shadow-md p-4 flex flex-col justify-center gap-2">
+        <h3 class="underline">Book this place!</h3>
+        <form action="#" class="flex flex-col gap-2">
+          <input type="date" name="start_date" placeholder="Start date" class="p-2 rounded-md">
+          <input type="date" name="end_date" placeholder="End date" class="p-2 rounded-md">
+          <button type="submit" class="bg-green-500 text-white p-2 rounded-md hover:bg-green-600">Book</button>
+        </form>
+      </div>
+
+      <div class="min-w-[150px] max-w-[2500px] bg-slate-100 rounded-lg shadow-md p-4 flex flex-col justify-center gap-2">
+        <h3 class="text-2xl">Details</h3>
+        <p class="text-sm"><%= @flat.number_of_guests %> guests</p>
+        <p class="text-sm"><%= @flat.price_per_night %>€ per night</p>
+      </div>
+    </div>
+  </div>
+</div>
